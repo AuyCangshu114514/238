@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<script src="game_html/js/gobla.js"></script>
+	</head>
+
+	<body>
+		
+		<button id="load" onclick="read_save()">读档</button>
+		<button id="start" onclick="new_game()">新的开始</button>
+		<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			function read_save(){
+				var data = load_save()
+				// console.log(data)
+				var chapter = data.chapter
+				window.location.href = 'game_html/chapter_' + chapter + '.html'
+			}
+			
+			function new_game(){
+				window.location.href = 'game_html/chapter_0-1.html'
+			}
+		</script>
+	</body>
+
+</html>
